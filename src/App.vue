@@ -1,10 +1,8 @@
 <template>
-<div class="container has-text-centered">
 <Header />
 <HelloWorld :key="compKey"/>
 <button @click="forceRerender">Refresh</button>
 <Footer />
-</div>
 </template>
 
 <script>

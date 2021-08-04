@@ -1,6 +1,5 @@
 <template>
 
-
     <div v-for="day in days" :key="day.id">
          <div class="buttons" style="padding-bottom:0.5rem;">
             <button v-on:click="day.visible = !day.visible" class="button is-large is-fullwidth">{{day.day}}</button>
@@ -17,7 +16,7 @@
                     <source v-bind:src="day.audio"/>
                 </audio>
             </div>
-    </div>
+        </div>
     </div> 
 
 </template>
