@@ -1,6 +1,8 @@
 <template>
 
-    <div v-for="day in days" :key="day.id">
+<div class="container p-4">
+
+        <div v-for="day in days" :key="day.id">
          <div class="buttons" style="padding-bottom:0.5rem;">
             <button v-on:click="day.visible = !day.visible" class="button is-large is-fullwidth">{{day.day}}</button>
         </div>
@@ -18,6 +20,11 @@
             </div>
         </div>
     </div> 
+
+</div>
+
+
+
 
 </template>
 
