@@ -1,6 +1,6 @@
 <template>
 <Header />
-<HelloWorld :key="compKey"/>
+<HelloWorld />
 <Footer />
 </template>
 
@@ -10,11 +10,6 @@ import Header from './components/Header.vue'
 import Footer from './components/Footer.vue'
 
 export default {
-  data(){
- return {
-   compKey:0,
- }
-  },
   components: {
     Header,
     HelloWorld,
