@@ -1,7 +1,6 @@
 <template>
 <Header />
 <HelloWorld :key="compKey"/>
-<button @click="forceRerender">Refresh</button>
 <Footer />
 </template>
 
@@ -20,13 +19,7 @@ export default {
     Header,
     HelloWorld,
     Footer
-  },
-  methods: {
-    forceRerender(){
-      this.compKey += 1;
-    }
   }
-
 }
 </script>
 
