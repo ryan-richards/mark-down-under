@@ -7,12 +7,12 @@
         <div v-for="day in days" :key="day.id">
          <div class="buttons" style="padding-bottom:0.5rem;">
             <button v-on:click="day.visible = !day.visible" class="button is-large is-fullwidth">{{day.day}}
-                <div class="pl-2 pt-2" v-if="Date.now() > new Date(day.date_available)"><span class="iconify" data-icon="fa-regular:check-circle"></span></div>
+                <div class="pl-2 pt-2" v-if="day.unlocked"><span class="iconify" data-icon="fa-regular:check-circle"></span></div>
                 <div class="pl-2 pt-1" v-else><span class="iconify" data-icon="fa-solid:lock"></span></div>
             </button>
     
         </div>
-        <div v-if="day.visible & Date.now() >= new Date(day.date_available)" class="card" style="transition: all 0.2s ease;">
+        <div v-if="day.unlocked" class="card" style="transition: all 0.2s ease;">
             <div v-if="day.img">
                 <img style="border-radius:15px" v-bind:src="day.img">
             </div>
