@@ -9,7 +9,7 @@
             </button>
     
         </div>
-        <div v-if="day.visible" class="card" style="transition: all 0.2s ease;">
+        <div v-if="day.visible && day.unlocked" class="card" style="transition: all 0.2s ease;">
             <div v-if="day.img">
                 <img style="border-radius:15px" v-bind:src="day.img">
             </div>
