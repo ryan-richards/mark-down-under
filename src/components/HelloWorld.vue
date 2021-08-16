@@ -1,10 +1,7 @@
 <template>
 
 <div class="container p-4">
-
-    
-
-        <div v-for="day in days" :key="day.id">
+        <div v-for="day in sortedDays" :key="day.id">
          <div class="buttons" style="padding-bottom:0.5rem;">
             <button v-on:click="day.visible = !day.visible" class="button is-large is-fullwidth">{{day.day}}
                 <div class="pl-2 pt-2" v-if="day.unlocked"><span class="iconify" data-icon="fa-regular:check-circle"></span></div>
@@ -52,7 +49,13 @@ export default {
         console.error(error);
     } else {
         this.days = data;
+        
     }
+    },
+    computed: {
+	sortedDays() {
+        return this.days.map(day=>day).sort((a,b)=>a.id - b.id)
+        }
     }
 }
 
